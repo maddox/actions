@@ -13,7 +13,7 @@ To use the action simply add the following lines to your `.github/main.workflow`
 
 ```
 action "Sleep" {
-  uses = "maddox/actions/sleep"
+  uses = "maddox/actions/sleep@master"
   args = "15"
 }
 ```
