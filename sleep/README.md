@@ -18,7 +18,7 @@ action "Sleep" {
 }
 ```
 
-## Required Arguments
+### Required Arguments
 
 The only argument used or required is the number of seconds you want to sleep for.
 
