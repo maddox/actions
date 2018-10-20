@@ -1,6 +1,5 @@
 FROM debian:stable-slim
 
-LABEL "name"="filter"
 LABEL "maintainer"="maddox <jon@jonmaddox.com>"
 LABEL "repository"="https://github.com/maddox/actions"
 LABEL "version"="1.0.0"
