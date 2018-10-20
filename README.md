@@ -2,7 +2,7 @@
 
 Fun with robots.
 
-This is a collection of GitHub Actions that I thought might be useful to others.
+This is a collection of [GitHub Actions](https://github.com/features/actions) that I thought might be useful to others.
 There aren't many for now, but any general actions I create will get stored here.
 
 ## [Home Assistant Command](home-assistant)
