@@ -24,7 +24,6 @@ action "Flash office lights" {
     SERVICE = "turn_on"
   }
 }
-```
 
 workflow "Build & Push Container" {
   on = "push"
@@ -53,6 +52,7 @@ action "Push image" {
   args = "push docker.pyrot.net:5000/pyrot/nzb-stream"
   needs = ["Log in to registry"]
 }
+```
 
 ### Minimum Home Assistant Version
 
