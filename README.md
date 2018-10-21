@@ -19,6 +19,12 @@ Of course you want to incorporate your smart devices into your GitHub workflow!
 ```
 action "Flash office lights" {
   uses = "maddox/actions/home-assistant@master"
+  secrets = ["HASS_HOST", "HASS_TOKEN"]
+  env = {
+    SERVICE_DATA = "{\n  \"entity_id\": \"light.office\",\n  \"flash\": \"short\"\n}"
+    DOMAIN = "light"
+    SERVICE = "turn_on"
+  }
 }
 ```
 
@@ -51,6 +57,11 @@ and how many tries before it exits in failure.
 ```
 action "Wait for 200" {
   uses = "maddox/actions/wait-for-200@master"
+  env = {
+    URL = "https://mysite.com"
+    SECONDS_BETWEEN_CHECKS = "2"
+    MAX_TRIES = "20"
+  }
 }
 ```
 
