@@ -26,34 +26,6 @@ action "Flash office lights" {
 }
 ```
 
-workflow "Build & Push Container" {
-  on = "push"
-  resolves = ["Push image"]
-}
-
-action "Build image" {
-  uses = "actions/docker/cli@master"
-  args = "build -t pyrot/nzb-stream ."
-}
-
-action "Tag image" {
-  needs = ["Build image"]
-  uses = "actions/docker/tag@7ffaaef"
-  args = "pyrot/nzb-stream docker.pyrot.net:5000/pyrot/nzb-stream"
-}
-
-action "Log in to registry" {
-  uses = "actions/docker/login@7ffaaef"
-  needs = ["Tag image"]
-  secrets = ["DOCKER_USERNAME", "DOCKER_PASSWORD", "DOCKER_REGISTRY_URL"]
-}
-
-action "Push image" {
-  uses = "actions/docker/cli@7ffaaef"
-  args = "push docker.pyrot.net:5000/pyrot/nzb-stream"
-  needs = ["Log in to registry"]
-}
-
 ### Minimum Home Assistant Version
 
 In order to use this action, your Home Assistant instance's version
