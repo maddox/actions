@@ -4,6 +4,8 @@ Run a thing on your server.
 
 This action will run the provided argument as a command on your $HOST via SSH.
 
+<img width="303" alt="image" src="https://user-images.githubusercontent.com/260/47310459-3eb48a80-d605-11e8-867f-702182404b51.png">
+
 ## Usage
 
 To use the action simply add the following lines to your `.github/main.workflow`
