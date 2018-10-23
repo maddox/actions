@@ -28,16 +28,31 @@ action "Flash office lights" {
 }
 ```
 
+# [SSH](ssh)
+
+This action will run the provided argument as a command on your $HOST via SSH.
+
+<img width="303" alt="image" src="https://user-images.githubusercontent.com/260/47310459-3eb48a80-d605-11e8-867f-702182404b51.png">
+
+```
+action "Run command" {
+  uses = "maddox/actions/ssh@master"
+  args = "/opt/deploy/run"
+  secrets = [
+    "PRIVATE_KEY",
+    "PUBLIC_KEY",
+    "HOST",
+    "USER"
+  ]
+}
+```
+
 ## [Sleep](sleep)
 
 This action will simply call `sleep` for N seconds in case you need a little
 padding in your workflow.
 
 <img width="300" alt="image" src="https://user-images.githubusercontent.com/260/47250532-ac3b9d80-d3f0-11e8-88af-9215c626da22.png">
-
-## Usage
-
-To use the action simply add the following lines to your `.github/main.workflow`
 
 ```
 action "Sleep" {
