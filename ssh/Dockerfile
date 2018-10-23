@@ -13,10 +13,6 @@ RUN apt-get update && apt-get install -y \
   openssh-client && \
   rm -Rf /var/lib/apt/lists/*
 
-RUN mkdir /github/home/.ssh
-RUN chmod 700 /github/home/.ssh
-RUN touch /github/home/.ssh/known_hosts
-RUN chmod 600 /github/home/.ssh/known_hosts
 
 ADD entrypoint.sh /entrypoint.sh
 

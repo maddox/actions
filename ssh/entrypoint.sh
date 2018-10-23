@@ -4,6 +4,12 @@ set -e
 
 SSH_PATH="/github/home/.ssh"
 
+RUN mkdir "$SSH_PATH"
+RUN chmod 700 "$SSH_PATH"
+RUN touch "$SSH_PATH/known_hosts"
+RUN chmod 600 "$SSH_PATH/known_hosts"
+
+
 echo "$PRIVATE_KEY" > "$SSH_PATH/deploy_key"
 echo "$PUBLIC_KEY" > "$SSH_PATH/deploy_key.pub"
 
