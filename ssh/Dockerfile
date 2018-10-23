@@ -11,7 +11,7 @@ LABEL "com.github.actions.color"="orange"
 
 RUN apt-get update && apt-get install -y \
   openssh-client \
-  rm -rf /var/lib/apt/lists/*
+  rm -Rf /var/lib/apt/lists/*
 
 RUN mkdir /github/home/.ssh
 RUN chmod 700 /github/home/.ssh
