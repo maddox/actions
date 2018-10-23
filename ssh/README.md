@@ -11,7 +11,7 @@ This action will run the provided argument as a command on your $HOST via SSH.
 To use the action simply add the following lines to your `.github/main.workflow`
 
 ```
-action "Run command" {
+action "Run deploy script" {
   uses = "maddox/actions/ssh@master"
   args = "/opt/deploy/run"
   secrets = [

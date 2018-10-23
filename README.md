@@ -35,7 +35,7 @@ This action will run the provided argument as a command on your $HOST via SSH.
 <img width="303" alt="image" src="https://user-images.githubusercontent.com/260/47310459-3eb48a80-d605-11e8-867f-702182404b51.png">
 
 ```
-action "Run command" {
+action "Run deploy script" {
   uses = "maddox/actions/ssh@master"
   args = "/opt/deploy/run"
   secrets = [
