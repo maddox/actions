@@ -1,6 +1,6 @@
 FROM jnewland/git-and-stuff
 
-LABEL "version"="1.0.0"
+LABEL "version"="1.0.1"
 LABEL "repository"="https://github.com/maddox/actions"
 LABEL "maintainer"="maddox <jon@jonmaddox.com>"
 
