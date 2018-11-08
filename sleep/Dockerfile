@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM busybox:latest
 
 LABEL "maintainer"="maddox <jon@jonmaddox.com>"
 LABEL "repository"="https://github.com/maddox/actions"
