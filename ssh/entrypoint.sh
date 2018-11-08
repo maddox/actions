@@ -2,7 +2,7 @@
 
 set -e
 
-SSH_PATH="/github/home/.ssh"
+SSH_PATH="$HOME/.ssh"
 
 mkdir "$SSH_PATH"
 touch "$SSH_PATH/known_hosts"
