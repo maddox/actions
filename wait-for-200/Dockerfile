@@ -9,6 +9,8 @@ LABEL "com.github.actions.description"="Poll a URL until it returns a 200 HTTP s
 LABEL "com.github.actions.icon"="refresh-cw"
 LABEL "com.github.actions.color"="blue"
 
+RUN apt-get update && apt-get install -y curl
+
 ADD entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
