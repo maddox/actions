@@ -41,6 +41,10 @@ You'll need to provide some secrets to use the action.
 * **HOST**: The host the action will SSH to to run the command. ie, `your.site.com`.
 * **USER**: The user the SSH command will auth as with the public key.
 
+### Optional Secrets
+
+* **PORT**: The port SSH is listening on. Default: `22`
+
 ## License
 
 The Dockerfile and associated scripts and documentation in this project are released under the [MIT License](LICENSE).
