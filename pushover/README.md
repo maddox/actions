@@ -12,7 +12,7 @@ To use the action simply add the following lines to your `.github/main.workflow`
 and provide the required Secrets and Environment Variables
 
 ```
-action "Notify me" {
+action "Notify Completion" {
   uses = "maddox/actions/pushover@master"
   secrets = ["APP_TOKEN", "USER_KEY"]
   env = {
