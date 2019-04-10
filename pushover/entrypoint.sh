@@ -2,6 +2,7 @@
 
 
 curl \
+--silent --output /dev/null \
 -H "Content-Type: application/x-www-form-urlencoded" \
 --data-urlencode "token=$APP_TOKEN" \
 --data-urlencode "user=$USER_KEY" \
