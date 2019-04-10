@@ -80,6 +80,26 @@ action "Wait for 200" {
 }
 ```
 
+# [Pushover Notifications](pushover)
+
+This action allows you to send yourself a push notification via [Pushover.net](https://Pushover.net).
+
+<img width="301" alt="Screen Shot 2019-04-10 at 2 13 27 AM" src="https://user-images.githubusercontent.com/260/55855724-483f9980-5b36-11e9-8765-c85593edbeef.png">
+
+```
+action "Notify me" {
+  uses = "maddox/actions/pushover@master"
+  secrets = ["APP_TOKEN", "USER_KEY"]
+  env = {
+    TITLE = "Build Complete"
+    MESSAGE = "Your container has been built and verified."
+    URL = "https://your.builddetails.com/builds/23212"
+    URL_TITLE = "Build Details"
+    SOUND = "magic"
+    PRIORITY = "1"
+  }
+}
+```
 
 ## License
 
