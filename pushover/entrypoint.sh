@@ -11,6 +11,5 @@ curl \
 --data-urlencode "url_title=$URL_TITLE" \
 --data-urlencode "sound=$SOUND" \
 --data-urlencode "priority=$PRIORITY" \
---data-urlencode "sound=$SOUND" \
 --data-urlencode "timestamp=$(date +%s)" \
 "https://api.pushover.net/1/messages.json"
