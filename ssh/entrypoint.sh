@@ -4,7 +4,7 @@ set -e
 
 SSH_PATH="$HOME/.ssh"
 
-mkdir "$SSH_PATH"
+mkdir -p "$SSH_PATH"
 touch "$SSH_PATH/known_hosts"
 
 echo "$PRIVATE_KEY" > "$SSH_PATH/deploy_key"
