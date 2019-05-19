@@ -40,7 +40,6 @@ action "Run deploy script" {
   args = "/opt/deploy/run"
   secrets = [
     "PRIVATE_KEY",
-    "PUBLIC_KEY",
     "HOST",
     "USER"
   ]

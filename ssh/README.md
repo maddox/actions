@@ -16,7 +16,6 @@ action "Run deploy script" {
   args = "/opt/deploy/run"
   secrets = [
     "PRIVATE_KEY",
-    "PUBLIC_KEY",
     "HOST",
     "USER"
   ]
@@ -37,9 +36,8 @@ The argument you will use is the command that will be ran on your server via SSH
 You'll need to provide some secrets to use the action.
 
 * **PRIVATE_KEY**: Your SSH private key.
-* **PUBLIC_KEY**: Your SSH public key.
 * **HOST**: The host the action will SSH to to run the command. ie, `your.site.com`.
-* **USER**: The user the SSH command will auth as with the public key.
+* **USER**: The user the SSH command will auth as with the private key.
 
 ### Optional Secrets
 
