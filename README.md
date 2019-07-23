@@ -46,6 +46,23 @@ action "Run deploy script" {
 }
 ```
 
+# [SCP](scp)
+
+This action will copy the provided file to your $HOST via SCP.
+
+```
+action "Copy build artifact" {
+  uses = "maddox/actions/scp@master"
+  args = "./your-file"
+  secrets = [
+    "PRIVATE_KEY",
+    "HOST",
+    "USER",
+    "TARGET"
+  ]
+}
+```
+
 ## [Sleep](sleep)
 
 This action will simply call `sleep` for N seconds in case you need a little
